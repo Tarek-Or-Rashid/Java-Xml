@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Permission for Screen Brightness Control -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+
+    <!-- Permission for Reading Images from Gallery -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+
+    <application
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Userdetails"
+        tools:targetApi="31">
+
+        <!-- Main Activity -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Userdetails">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Guest Shopping Activity -->
+        <activity
+            android:name=".Activity.GuestShoppingActivity"
+            android:exported="false"
+            android:theme="@style/Theme.UserDetails.NoActionBar" />
+
+        <!-- Login Activity -->
+        <activity
+            android:name=".Activity.LoginActivity"
+            android:exported="false"
+            android:theme="@style/Theme.UserDetails.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Register Activity -->
+        <activity
+            android:name=".Activity.RegisterActivity"
+            android:exported="false"
+            android:theme="@style/Theme.UserDetails.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Dashboard Activity -->
+        <activity
+            android:name=".Activity.DashboardActivity"
+            android:exported="false"
+            android:theme="@style/Theme.UserDetails.NoActionBar" />
+
+        <!-- Profile Activity -->
+        <activity
+            android:name=".Activity.ProfileActivity"
+            android:exported="false"
+            android:theme="@style/Theme.UserDetails.NoActionBar"
+            android:windowSoftInputMode="adjustResize"
+            tools:ignore="Instantiatable" />
+
+        <!-- Settings Activity -->
+        <activity
+            android:name=".Activity.SettingsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.UserDetails.NoActionBar"
+            android:configChanges="locale|fontScale|uiMode"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".Activity.CartActivity"
+            android:exported="false"
+            android:theme="@style/Theme.UserDetails.NoActionBar" />
+        <!-- Add Product Activity -->
+        <activity
+            android:name=".Activity.AddProductActivity"
+            android:exported="false"
+            android:theme="@style/Theme.UserDetails.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- View Product Activity -->
+        <activity
+            android:name=".Activity.ViewProductActivity"
+            android:exported="false"
+            android:theme="@style/Theme.UserDetails.NoActionBar" />
+
+    </application>
+
+</manifest>
