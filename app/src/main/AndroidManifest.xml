@@ -91,6 +91,12 @@
             android:exported="false"
             android:theme="@style/Theme.UserDetails.NoActionBar" />
 
+        <!-- Orders Activity -->
+        <activity
+            android:name=".Activity.OrdersActivity"
+            android:exported="false"
+            android:theme="@style/Theme.UserDetails.NoActionBar" />
+
     </application>
 
 </manifest>

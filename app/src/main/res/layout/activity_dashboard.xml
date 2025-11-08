@@ -8,13 +8,13 @@
     android:background="#F5F5F5"
     tools:context=".Activity.DashboardActivity">
 
-    <!-- Top Bar - No Color (Transparent/White) -->
+    <!-- Top Bar -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="75dp"
-        android:elevation="4dp"/>
+        android:elevation="4dp" />
 
-    <!-- Main Content -->
+    <!-- Main Scrollable Content -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- Welcome Section with Color Background -->
+            <!-- Welcome Section -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -46,7 +46,7 @@
                         android:text="Welcome Back!"
                         android:textSize="16sp"
                         android:textColor="#FFFFFF"
-                        android:alpha="0.9"/>
+                        android:alpha="0.9" />
 
                     <TextView
                         android:id="@+id/tvUserName"
@@ -56,7 +56,7 @@
                         android:textSize="24sp"
                         android:textStyle="bold"
                         android:textColor="#FFFFFF"
-                        android:layout_marginTop="4dp"/>
+                        android:layout_marginTop="4dp" />
 
                     <TextView
                         android:id="@+id/tvUserEmail"
@@ -66,11 +66,11 @@
                         android:textSize="14sp"
                         android:textColor="#FFFFFF"
                         android:alpha="0.8"
-                        android:layout_marginTop="2dp"/>
+                        android:layout_marginTop="2dp" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- Quick Stats Card -->
+            <!-- Account Information Card -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -91,9 +91,9 @@
                         android:textSize="18sp"
                         android:textStyle="bold"
                         android:textColor="#333333"
-                        android:layout_marginBottom="12dp"/>
+                        android:layout_marginBottom="12dp" />
 
-                    <!-- User Details -->
+                    <!-- Phone -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -106,7 +106,7 @@
                             android:layout_weight="1"
                             android:text="Phone:"
                             android:textSize="14sp"
-                            android:textColor="#666666"/>
+                            android:textColor="#666666" />
 
                         <TextView
                             android:id="@+id/tvUserPhone"
@@ -117,9 +117,10 @@
                             android:textSize="14sp"
                             android:textStyle="bold"
                             android:textColor="#333333"
-                            android:gravity="end"/>
+                            android:gravity="end" />
                     </LinearLayout>
 
+                    <!-- Gender -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -131,7 +132,7 @@
                             android:layout_weight="1"
                             android:text="Gender:"
                             android:textSize="14sp"
-                            android:textColor="#666666"/>
+                            android:textColor="#666666" />
 
                         <TextView
                             android:id="@+id/tvUserGender"
@@ -142,12 +143,12 @@
                             android:textSize="14sp"
                             android:textStyle="bold"
                             android:textColor="#333333"
-                            android:gravity="end"/>
+                            android:gravity="end" />
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- Menu Options Grid -->
+            <!-- Quick Actions Title -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -155,16 +156,16 @@
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:textColor="#333333"
-                android:layout_marginBottom="12dp"/>
+                android:layout_marginBottom="12dp" />
 
-            <!-- First Row -->
+            <!-- Row 1 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_marginBottom="12dp">
 
-                <!-- View Profile Card -->
+                <!-- View Profile -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardViewProfile"
                     android:layout_width="0dp"
@@ -174,22 +175,21 @@
                     app:cardCornerRadius="12dp"
                     app:cardElevation="4dp"
                     android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground">
+                    android:focusable="true">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="vertical"
                         android:gravity="center"
-                        android:padding="16dp"
-                        android:background="#2196F3">
+                        android:orientation="vertical"
+                        android:background="#2196F3"
+                        android:padding="16dp">
 
                         <ImageView
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:src="@android:drawable/ic_menu_myplaces"
-                            app:tint="#FFFFFF"/>
+                            app:tint="#FFFFFF" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -198,12 +198,11 @@
                             android:textSize="14sp"
                             android:textStyle="bold"
                             android:textColor="#FFFFFF"
-                            android:layout_marginTop="8dp"
-                            android:gravity="center"/>
+                            android:layout_marginTop="8dp" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
-                <!-- Edit Profile Card -->
+                <!-- Edit Profile -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardEditProfile"
                     android:layout_width="0dp"
@@ -213,22 +212,21 @@
                     app:cardCornerRadius="12dp"
                     app:cardElevation="4dp"
                     android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground">
+                    android:focusable="true">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="vertical"
                         android:gravity="center"
-                        android:padding="16dp"
-                        android:background="#4CAF50">
+                        android:orientation="vertical"
+                        android:background="#4CAF50"
+                        android:padding="16dp">
 
                         <ImageView
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:src="@android:drawable/ic_menu_edit"
-                            app:tint="#FFFFFF"/>
+                            app:tint="#FFFFFF" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -237,20 +235,19 @@
                             android:textSize="14sp"
                             android:textStyle="bold"
                             android:textColor="#FFFFFF"
-                            android:layout_marginTop="8dp"
-                            android:gravity="center"/>
+                            android:layout_marginTop="8dp" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
 
-            <!-- Second Row -->
+            <!-- Row 2 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_marginBottom="12dp">
 
-                <!-- Add Product Card -->
+                <!-- Add Product -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardAddProduct"
                     android:layout_width="0dp"
@@ -260,22 +257,21 @@
                     app:cardCornerRadius="12dp"
                     app:cardElevation="4dp"
                     android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground">
+                    android:focusable="true">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="vertical"
                         android:gravity="center"
-                        android:padding="16dp"
-                        android:background="#9C27B0">
+                        android:orientation="vertical"
+                        android:background="#9C27B0"
+                        android:padding="16dp">
 
                         <ImageView
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:src="@android:drawable/ic_menu_add"
-                            app:tint="#FFFFFF"/>
+                            app:tint="#FFFFFF" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -284,12 +280,11 @@
                             android:textSize="14sp"
                             android:textStyle="bold"
                             android:textColor="#FFFFFF"
-                            android:layout_marginTop="8dp"
-                            android:gravity="center"/>
+                            android:layout_marginTop="8dp" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
-                <!-- View Product Card -->
+                <!-- View Product -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardViewProduct"
                     android:layout_width="0dp"
@@ -299,22 +294,21 @@
                     app:cardCornerRadius="12dp"
                     app:cardElevation="4dp"
                     android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground">
+                    android:focusable="true">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="vertical"
                         android:gravity="center"
-                        android:padding="16dp"
-                        android:background="#673AB7">
+                        android:orientation="vertical"
+                        android:background="#673AB7"
+                        android:padding="16dp">
 
                         <ImageView
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:src="@android:drawable/ic_menu_agenda"
-                            app:tint="#FFFFFF"/>
+                            app:tint="#FFFFFF" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -323,20 +317,19 @@
                             android:textSize="14sp"
                             android:textStyle="bold"
                             android:textColor="#FFFFFF"
-                            android:layout_marginTop="8dp"
-                            android:gravity="center"/>
+                            android:layout_marginTop="8dp" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
 
-            <!-- Third Row -->
+            <!-- Row 3 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_marginBottom="12dp">
 
-                <!-- Settings Card -->
+                <!-- Settings -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardSettings"
                     android:layout_width="0dp"
@@ -346,22 +339,21 @@
                     app:cardCornerRadius="12dp"
                     app:cardElevation="4dp"
                     android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground">
+                    android:focusable="true">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="vertical"
                         android:gravity="center"
-                        android:padding="16dp"
-                        android:background="#FF9800">
+                        android:orientation="vertical"
+                        android:background="#FF9800"
+                        android:padding="16dp">
 
                         <ImageView
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:src="@android:drawable/ic_menu_preferences"
-                            app:tint="#FFFFFF"/>
+                            app:tint="#FFFFFF" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -370,12 +362,11 @@
                             android:textSize="14sp"
                             android:textStyle="bold"
                             android:textColor="#FFFFFF"
-                            android:layout_marginTop="8dp"
-                            android:gravity="center"/>
+                            android:layout_marginTop="8dp" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
-                <!-- Logout Card -->
+                <!-- Logout -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardLogout"
                     android:layout_width="0dp"
@@ -385,22 +376,21 @@
                     app:cardCornerRadius="12dp"
                     app:cardElevation="4dp"
                     android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground">
+                    android:focusable="true">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="vertical"
                         android:gravity="center"
-                        android:padding="16dp"
-                        android:background="#F44336">
+                        android:orientation="vertical"
+                        android:background="#F44336"
+                        android:padding="16dp">
 
                         <ImageView
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:src="@android:drawable/ic_lock_power_off"
-                            app:tint="#FFFFFF"/>
+                            app:tint="#FFFFFF" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -409,11 +399,42 @@
                             android:textSize="14sp"
                             android:textStyle="bold"
                             android:textColor="#FFFFFF"
-                            android:layout_marginTop="8dp"
-                            android:gravity="center"/>
+                            android:layout_marginTop="8dp" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
+
+            <!-- Row 4 (Optional: View Orders) -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewOrders"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📦"
+                        android:textSize="36sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="View Orders"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="8dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
         </LinearLayout>
     </ScrollView>

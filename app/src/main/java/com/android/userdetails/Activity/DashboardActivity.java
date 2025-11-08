@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
-
 import android.widget.TextView;
 
 import androidx.appcompat.app.AlertDialog;
@@ -20,7 +19,8 @@ public class DashboardActivity extends AppCompatActivity {
 
     // UI Components
     private TextView tvUserName, tvUserEmail, tvUserPhone, tvUserGender;
-    private CardView cardViewProfile, cardEditProfile, cardAddProduct, cardViewProduct, cardSettings, cardLogout;
+    private CardView cardViewProfile, cardEditProfile, cardAddProduct, cardViewProduct,
+            cardViewOrders, cardSettings, cardLogout;
 
     // Database Helper
     private DatabaseHelper databaseHelper;
@@ -83,6 +83,7 @@ public class DashboardActivity extends AppCompatActivity {
         cardEditProfile = findViewById(R.id.cardEditProfile);
         cardAddProduct = findViewById(R.id.cardAddProduct);
         cardViewProduct = findViewById(R.id.cardViewProduct);
+        cardViewOrders = findViewById(R.id.cardViewOrders);
         cardSettings = findViewById(R.id.cardSettings);
         cardLogout = findViewById(R.id.cardLogout);
     }
@@ -142,6 +143,15 @@ public class DashboardActivity extends AppCompatActivity {
             }
         });
 
+        // View Orders Card Click
+        cardViewOrders.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DashboardActivity.this, OrdersActivity.class);
+                startActivity(intent);
+            }
+        });
+
         // Settings Card Click
         cardSettings.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -189,10 +199,19 @@ public class DashboardActivity extends AppCompatActivity {
         editor.clear();
         editor.apply();
 
-        // Redirect to Login
-        redirectToLogin();
+        // Redirect to GuestShoppingActivity instead of LoginActivity
+        redirectToGuestShopping();
     }
 
+    // ✅ NEW METHOD: Redirect to GuestShoppingActivity after logout
+    private void redirectToGuestShopping() {
+        Intent intent = new Intent(DashboardActivity.this, GuestShoppingActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
+        finish();
+    }
+
+    // Keep this method for other redirects (like when user data is not found)
     private void redirectToLogin() {
         Intent intent = new Intent(DashboardActivity.this, LoginActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
